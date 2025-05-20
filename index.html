@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Footnotes</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>Page Title</h1>
+    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="footnote">This isn't a typo for
+            "elite".</span>. Mauris ut ante nisi. Aenean non viverra quam. Nullam
+        mi diam, mattis sed orci sit amet, fermentum iaculis magna. Vestibulum ut ultrices elit. Sed pulvinar, libero
+        vitae fringilla fermentum, erat massa finibus diam, ac feugiat turpis orci nec arcu. Etiam non rhoncus dui. In
+        vitae pharetra elit. Quisque nec tortor iaculis orci suscipit posuere. Nam id augue ipsum. Proin justo felis,
+        viverra vitae tellus eget, cursus sagittis lacus. Ut varius nunc eget condimentum volutpat. Phasellus nibh
+        magna, pellentesque at ante ut, tincidunt auctor dui. In tortor risus, rutrum eu accumsan a, rutrum vitae neque.
+        Donec rutrum enim sit amet pellentesque aliquam. Sed fringilla et mi a varius. In vestibulum interdum faucibus.
+    </div>
+    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget feugiat orci. Duis metus lectus, laoreet
+        id justo quis, malesuada viverra urna. Integer<span class="footnote">Who doesn't love a good integer?</span>
+        condimentum, leo a blandit luctus, nunc ligula aliquet mauris,
+        vitae pretium lectus lorem quis libero. Cras at eros enim. Maecenas turpis purus, pellentesque sit amet cursus
+        a, lobortis pretium neque. Maecenas dui ipsum, dapibus nec iaculis et, ultricies eget libero. Duis ac dolor
+        sagittis, commodo libero in, venenatis ipsum. Suspendisse sed lorem aliquet, viverra nisl at, consectetur odio.
+        Curabitur a orci tellus. Nulla commodo dui convallis, elementum urna et, consectetur nibh.</div>
+    <div>Ut sed commodo nisl, non vestibulum velit. In pulvinar, urna at sagittis finibus, mauris metus ultrices nunc,
+        eu ultrices libero dui nec ligula. Proin volutpat neque ac magna<span class="footnote">NB note 'magna carta',
+            not 'the magna carta'</span> mollis consectetur. Praesent laoreet quis urna
+        in tristique. Cras in nisi lorem. Mauris eu est leo. Pellentesque sed neque sed elit porta ullamcorper.
+        Curabitur sollicitudin at nisi fringilla interdum.</div>
+    <div>Nullam eget arcu eu ligula dignissim scelerisque. Quisque varius eget quam at mattis. Nunc ut quam id massa
+        lobortis accumsan in malesuada turpis. Nulla tempor at ipsum in accumsan. Proin porttitor laoreet lectus, quis
+        pellentesque ipsum posuere eget. Nullam ac urna euismod, tempor augue at, gravida ante. Donec sit amet gravida
+        mi, ut blandit sapien. Integer quis pellentesque massa, eget egestas lacus. Mauris tincidunt quam sem, eu
+        consectetur erat dapibus a. Aenean congue pharetra nisi id aliquet<span class="footnote">Scholars do not all
+            agree on this point</span>. Donec cursus mollis dui, ut elementum lectus
+        laoreet a.</div>
+    <div>Vestibulum mattis venenatis velit, condimentum auctor lacus volutpat nec. Praesent a augue mauris. Aenean
+        elementum at mi id lobortis. Donec ac purus lorem. Nullam tristique libero sed elit convallis vehicula. Praesent
+        at ligula quis neque volutpat dignissim<span class="footnote">You can get a cream for this</span> at vel massa.
+        Aliquam dignissim tincidunt ipsum id fermentum. Nam sit
+        amet elit egestas, tempor dui eu, efficitur felis. Morbi bibendum rhoncus pharetra.</div>
+    <div>
+        <ol class="footnotes">
+
+        </ol>
+    </div>
+    <script>
+        window.onload = function () {
+            $("span.footnote").each(function (i, obj) {
+                $("ol.footnotes").append($("<li></li>").text($(obj).text()))
+                $(obj).html("<sup>" + (i + 1) + "</sup>")
+            });
+
+
+        };</script>
+</body>
+
+</html>
